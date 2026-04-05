@@ -1,6 +1,8 @@
 from fastapi.responses import StreamingResponse
 import asyncio
 import json
+import uvicorn
+import os
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -283,5 +285,8 @@ async def analyze_stream(query: str, max_results: int = 15):
     )
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    
+
+    port = int(os.environ.get("PORT", 10000)) 
+
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
