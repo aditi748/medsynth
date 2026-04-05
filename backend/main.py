@@ -2,17 +2,20 @@ from fastapi.responses import StreamingResponse
 import asyncio
 import json
 import uvicorn
+import sys
 import os
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import traceback
 
-from .agents.paper_fetcher import fetch_papers
-from .agents.summarizer import summarize_all_papers
-from .agents.evidence_scorer import score_papers
-from .agents.contradiction_detector import detect_contradictions
-from .agents.report_generator import generate_report
+from agents.paper_fetcher import fetch_papers
+from agents.summarizer import summarize_all_papers
+from agents.evidence_scorer import score_papers
+from agents.contradiction_detector import detect_contradictions
+from agents.report_generator import generate_report
+
+sys.path.append(os.path.dirname(__file__))
 
 app = FastAPI(
     title="MedSynth API",
@@ -23,7 +26,7 @@ app = FastAPI(
 # Allows React on port 5173 to talk to this server on port 8000
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
