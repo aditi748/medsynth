@@ -8,11 +8,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import traceback
 
-from agents.paper_fetcher import fetch_papers
-from agents.summarizer import summarize_all_papers
-from agents.evidence_scorer import score_papers
-from agents.contradiction_detector import detect_contradictions
-from agents.report_generator import generate_report
+from .agents.paper_fetcher import fetch_papers
+from .agents.summarizer import summarize_all_papers
+from .agents.evidence_scorer import score_papers
+from .agents.contradiction_detector import detect_contradictions
+from .agents.report_generator import generate_report
 
 app = FastAPI(
     title="MedSynth API",
