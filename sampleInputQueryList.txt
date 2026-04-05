@@ -1,0 +1,12 @@
+--List of some sample input queries for testing the software--
+
+1. Is Aspirin effective for the primary prevention of cardiovascular disease in elderly patients?
+2. Does Omega-3 supplementation reduce the risk of major adverse cardiovascular events?
+3. Risk of breast cancer associated with Menopausal Hormone Therapy (MHT) in postmenopausal women.
+4. Comparison of Intermittent Fasting versus Continuous Calorie Restriction for weight loss in obese adults.
+5. Using Artificial Intelligence for the early detection of Diabetic Retinopathy from retinal images.
+6. Can Metformin improve longevity and reduce age-related diseases in non-diabetic adults?
+7. Does Vitamin D supplementation reduce the risk or severity of acute respiratory tract infections?
+8. Cardiovascular outcomes of GLP-1 receptor agonists in patients with obesity but without diabetes
+9. Effectiveness of the Mediterranean diet in preventing cognitive decline and Alzheimer's disease in the elderly.
+10. Clinical outcomes of robotic-assisted radical prostatectomy versus standard laparoscopic surgery.
